@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gallery</title>
+</head>
+
+<body style="background-color:#FDF6E4;">
+
+<style>
+
+p {
+    color: #3A1F0E;
+    font-family: Arial;
+    font-size: 15px;
+}
+
+img:hover {
+   transform: scale(1.1);
+}
+
+.outer-box {
+   width: 80%;
+   margin: 20px auto;
+   background-color: #FFFFFF;
+   border-radius: 15px;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+}
+
+
+.gallery-section {
+         margin: 20px;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         flex-direction: column;
+}
+
+.image-grid {
+       display: grid;
+       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+       gap: 20px;
+       padding: 0 20px;
+       max-width: 1000px;
+       margin: 0 auto;
+        }
+
+.image-grid img {
+       width: 100%;
+       height: auto;
+       max-width: 100%;
+       border-radius: 10px;
+}
+
+.desc {
+      font-size: 14px;
+      color: #7A4B3A;
+      text-align: center;
+}
+
+video {
+     max-width: 100%;
+     margin: 20px 0;
+     display: block;
+     border-radius: 10px;
+
+  </style>
+</head>
+ 
+<div class="outer-box">
+
+<center><h1 style="font-size:40px; font-family:Comic Sans MS; color:#6E4B3A;">My Gallery</h1></center>
+
+
+<div class="gallery-section">
+    
+    
+<center><p>Presenting... the fun part! Welcome to my gallery. I'll be sharing the photos of my little moments that I cherished the most.</p></center>
+    
+<br>
+
+    <div class="category">
+
+<center><h1 style="font-size:25px; font-family:Cooper Black; color:#8B5E3C;">Personal Highlights:</h1></center>
+
+<br>
+            
+    <div class="image-grid">
+         <div>
+         <img src="personal1.jpg" alt="Personal Highlight 1">
+         <p class="desc">Internship Moments</p>
+    </div>
+
+    <div>
+        <img src="personal2.jpg" alt="Personal Highlight 3">
+        <p class="desc">SPM Award Ceremony in High School with My Parents!</p>
+    </div>
+
+    <div>
+       <img src="personal3.jpg" alt="Personal Highlight 4">
+       <p class="desc">My Birthday Celebration</p>
+    </div>
+
+     </div>
+  </div>
+
+
+    <div class="category">
+
+<center><h1 style="font-size:25px; font-family:Cooper Black; color:#8B5E3C;">Vacation Diaries:</h1></center>
+
+<br>
+            
+    <div class="image-grid">
+         <div>
+            <img src="holiday1.jpg" alt="Holiday 1">
+            <p class="desc">Snorkeling Time</p>
+         </div>
+
+         <div>
+            <img src="holiday2.jpg" alt="Holiday 2">
+            <p class="desc">View of Kampung Nelayan Jetty</p>
+            </div>
+
+         <div>
+            <img src="holiday3.jpg" alt="Holiday 3">
+            <p class="desc">Pasar Payang View</p>
+         </div>
+
+    
+     </div>
+ </div>
+
+<br>
+
+<center>
+<p>You can pause the audio to watch the videos.</p>
+<audio autoplay loop controls>
+  <source src="ponyo.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+</center>
+
+
+  <video width="320" height="240" controls>
+     <source src="holidayvideo1.mp4" type="video/mp4">
+  </video>
+
+<p style="font-size: 14px; color: #7A4B3A";>Some short clip of my snorkeling view</p>
+
+  <video width="320" height="240" controls>
+    <source src="holidayvideo2.mp4" type="video/mp4">
+  </video>
+
+<p style="font-size: 14px; color: #7A4B3A";>Fire Show Moment</p>
+
+
+<br>
+    
+  
+      <div class="category">
+             
+<center><h1 style="font-size:25px; font-family:Cooper Black; color:#8B5E3C;">Joyful Memories:</h1></center>
+            
+<br>
+       
+       <div class="image-grid">
+            <div>
+               <img src="memo1.jpg" alt="Friends 1">
+               <p class="desc">Picnic Day!</p>
+               </div>
+
+            <div>
+               <img src="memo2.jpg" alt="Friends 2">
+               <p class="desc">Group Selfie</p>
+                </div>
+
+            <div>
+               <img src="memo3.jpg" alt="Friends 3">
+               <p class="desc">With the Girls</p>
+            </div>
+
+            </div>
+      </div>
+
+    
+   <div class="category">
+
+ <center><h1 style="font-size:25px; font-family:Cooper Black; color:#8B5E3C;">Pawsitive Moments:</h1></center>
+            
+         <div class="image-grid">
+              <div>
+              <img src="cat1.jpg" alt="Pet 1">
+              <p class="desc">Study Buddy</p>
+        </div>
+
+        <div>
+             <img src="cat2.jpg" alt="Pet 2">
+             <p class="desc">Nappy Time</p>
+        </div>
+      
+        <div>
+             <img src="cat3.jpg" alt="Pet 3">
+             <p class="desc">Had to weat E-Collar because he was injured. It's cute though!</p>
+        </div>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

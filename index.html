@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Linn's Personal Website</title>
+<link rel="icon" type="image/jpg" href="logo.jpg">
+
+
+<style>
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FDF6E4;
+  margin: 0;
+  color: #6E4B3A;
+  overflow-y: scroll;
+}
+
+nav {
+  margin-top: 7px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #6E4B3A;
+  font-size: 18px;
+  margin: 0 15px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: #9E7B56;
+  color: #fff;
+}
+
+iframe {
+    display: block;
+    width: 100%;
+    height: calc(100vh - 150px);
+    border: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #EAE7DC;
+    font-size: 13px;
+    text-align: center;
+    color: #6E4B3A;
+    padding: 5px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D8C3A5;
+    padding: 10px;
+    font-size: 24px;
+    font-family: Arial;
+    color: #6E4B3A;
+}
+
+.header img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+
+</style>
+
+</head>
+<body>
+    
+
+<div class="header">
+    <img src="logo.jpg" alt="Logo">
+    <h1>Welcome To My Website!</h1>
+</div>
+
+
+ <div class="navbar">
+      <div style="background-color: #C5A880; text-align: center; padding: 10px;">
+          <nav><b>
+            <a href="home.html" target="content-frame">Home</a>
+             <a href="biodata.html" target="content-frame">Biodata</a>
+             <a href="education.html" target="content-frame">Education</a>
+             <a href="family.html" target="content-frame">Family</a>
+             <a href="friends.html" target="content-frame">Friends</a>
+             <a href="playlist.html" target="content-frame">Playlists & Recommendations</a>
+             <a href="gallery.html" target="content-frame">Gallery</a>
+            </nav></b>
+      </div>
+  </div>
+
+<iframe name="content-frame" src="home.html"></iframe>
+
+     <footer>
+        <p>2024 Linn's Personal Website.</p>
+    </footer>
+
+</body>
+</html>

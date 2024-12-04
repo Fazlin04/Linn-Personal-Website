@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HOME</title>
+</head>
+<body>
+
+<br>
+
+<style>
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+    p {
+        color: #6E4B3A;
+        font-size: 15px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+        background-color: #D8C3A5;
+        border-radius: 50%;
+        margin: 50px auto;
+        overflow: hidden;
+        border: 5px solid #6E4B3A;
+    }
+
+    .circle img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .circle:hover {
+        transform: scale(1.1);
+    }
+
+    .divider {
+        width: 80%;
+        margin: 30px auto;
+        height: 2px;
+        background: #D8C3A5;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .clock-box {
+        width: 200px;
+        height: 100px;
+        background-color: #D8C3A5;
+        border: 2px solid #6E4B3A;
+        border-radius: 8px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 18px;
+        font-family: Arial, sans-serif;
+        color: #6E4B3A;
+        text-align: center;
+        flex-direction: column; /* Stack time and date vertically */
+        padding: 10px;
+    }
+
+    .clock-gif-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin: 50px auto;
+    }
+
+    #bearGif {
+        width: 150px;
+        height: auto;
+    }
+</style>
+
+<body style="background-color:#FDF6E4; font-family: Arial; text-align: center;">
+
+<p>Greetings, my name is Fazlin Husniyah, and you are visiting my personal website.</p>
+<p>This website provides insights into my background, experiences, and various aspects of my life.</p>
+
+<div class="circle">
+    <img src="mee.jpg" alt="Cover Picture">
+</div>
+
+<div class="divider"></div>
+
+<p><i>"Not having it all figured out is part of the process."</p></i>
+
+<br>
+
+<p>Tick-tock! Let’s find out the time and date!</p>
+
+<div class="clock-gif-container">
+    <div class="clock-box" id="clock">--:--:--</div>
+    <img id="bearGif" src="home.gif" alt="Brown Bear Gif">
+</div>
+
+<script>
+    function updateClock() {
+        const now = new Date();
+
+        const time = now.toLocaleTimeString(); // e.g., 11:59:30 AM
+
+        const date = now.toLocaleDateString('en-GB', {
+            day: '2-digit',
+            month: '2-digit',
+            year: 'numeric'
+        }); // e.g., 04/12/2024
+
+        document.getElementById("clock").innerHTML = `<strong>${time}</strong><br>${date}`;
+    }
+
+    setInterval(updateClock, 1000);
+    updateClock();
+</script>
+
+<div id="clock"></div>
+
+
+</body>
+</html>
+

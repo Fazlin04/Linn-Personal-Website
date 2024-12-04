@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BIODATA</title>
+</head>
+
+<body>
+
+<style>
+p {
+     color: #3A1F0E;
+     font-family: Arial;
+     font-size: 15px;
+}
+
+ h2 {
+   font-family: Arial, sans-serif;
+}
+
+ol {
+    font-family: Arial, sans-serif;
+    color: #6E4B3A;
+}
+
+ table {
+         width: 50%;
+         border-collapse: collapse;
+         background-color: white;
+         border: 2px solid #8B5E3C;
+         border-radius: 8px;
+         margin: auto;
+         margin-bottom: 20px;
+}
+
+td {
+       padding: 10px;
+       border: 1px solid #8B5E3C;
+       color: #6E4B3A;
+}
+
+td:first-child {
+      font-weight: bold;
+}
+
+tr:nth-child(odd) {
+       background-color: white;
+}
+
+tr:nth-child(even) {
+       background-color: #FDF6E4;
+}
+
+.about-title {
+        font-size: 25px;
+        font-family: 'Cooper Black', sans-serif;
+        color: #8B5E3C;
+        margin-bottom: 10px;
+}
+
+.about-table {
+       width: 70%;
+       background-color: white;
+       border: 2px solid #8B5E3C;
+       border-radius: 8px;
+       padding: 15px;
+       color: #6E4B3A;
+       text-align: justify;
+       margin: auto;
+}
+
+img:hover {
+   transform: scale(1.1);
+}
+
+.outer-box {
+   width: 80%;
+   margin: 20px auto;
+   background-color: #FFFFFF;
+   border-radius: 15px;
+   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+   padding: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+  background-color: #6E4B3A;
+  color: white;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #8B5E3C;
+}
+
+ul {
+  list-style-type: disc;
+  color: #8B5E3C;
+  font-family: Arial;
+  font-size: 15px;
+}
+</style>
+
+<body style="background-color:#FDF6E4;">
+
+<div class="outer-box">
+<center><h2 style="font-size:40px; font-family:Comic Sans MS; color:#6E4B3A;">My Biodata</h2><center>
+<img src="myself.jpg" alt="Photo of Myself" width="300" height="300" style="border: 5px solid #6E4B3A; border-radius: 15px;"></center>
+
+<p>
+
+<div>
+    <table>
+        <tr>
+            <td>Name:</td>
+            <td>Fazlin Husniyah Binti Baldrulisam</td>
+        </tr>
+        <tr>
+            <td>Gender:</td>
+            <td>Female</td>
+        </tr>
+        <tr>
+            <td>Age:</td>
+            <td>20 Years Old</td>
+        </tr>
+        <tr>
+            <td>Date of Birth:</td>
+            <td>18 November 2004</td>
+        </tr>
+        <tr>
+            <td>Hometown:</td>
+            <td>Bukit Mertajam, Pulau Pinang</td>
+        </tr>
+        <tr>
+            <td>Interests and Hobbies:</td>
+            <td>Listening to music (especially Gracie Abrams' songs!)</td>
+        </tr>
+    </table>
+</div>
+
+
+<div>
+    <p class="about-title">About Me:</p>
+    <div class="about-table">
+        <p>My name is Fazlin, though you may also call me Lin. I was born at Hospital Seberang Jaya in Pulau Pinang, and I have spent my entire life here. 
+        I am the third child in a family of five, with two older sisters and loving parents.</p>
+
+        <p>I have a deep passion for music, which has always been my biggest companion. My playlist includes favorites such as Gracie Abrams, Enhypen, Taylor Swift, and many more. 
+        I am particularly into genres like indie, pop, and ballads.</p>
+    </div>
+</div>
+
+<br>
+
+<div style="text-align: center;">
+  <p>Here are my top three current favorite songs:</p>
+
+  <p>🎵 <b id="song-title">That's So True by Gracie Abrams</b></p>
+  
+  <div>
+    <button id="prev">Previous</button>
+    <button id="play-pause">Play</button>
+    <button id="next">Next</button>
+  </div>
+
+  <audio id="audio-player" src="thats_so_true.mp3"></audio>
+</div>
+
+<h2>Favorite Artists</h2>
+<ol>
+  <li>Gracie Abrams</li>
+  <li>Sabrina Carpenter</li>
+  <li>Amelia Moore</li>
+  <li>Taylor Swift</li>
+  <li>Ariana Grande</li>
+  <li>Olivia Rodrigo</li>
+</ol>
+
+<h2>Favorite Groups</h2>
+<ol>
+  <li>Enhypen</li>
+  <li>TXT</li>
+  <li>IVE</li>
+  <li>Seventeen</li>
+  <li>Chase Atlantic</li>
+  <li>The 1975</li>
+</ol>
+
+</div>
+
+<script>
+const songs = [
+  { title: "That's So True by Gracie Abrams", src: "thats_so_true.mp3" },
+  { title: "XO (If You Say Yes) by Enhypen", src: "Enhypen.mp3" },
+  { title: "Heaven by TXT", src: "Heaven.mp4" }
+];
+
+let currentIndex = 0;
+const audioPlayer = document.getElementById('audio-player');
+const songTitle = document.getElementById('song-title');
+const playPauseButton = document.getElementById('play-pause');
+
+function loadSong(index) {
+  audioPlayer.src = songs[index].src;
+  songTitle.textContent = songs[index].title;
+  playPauseButton.textContent = 'Play';
+}
+
+function playPauseSong() {
+  if (audioPlayer.paused) {
+    audioPlayer.play();
+    playPauseButton.textContent = 'Pause';
+  } else {
+    audioPlayer.pause();
+    playPauseButton.textContent = 'Play';
+  }
+}
+
+function playNextSong() {
+  currentIndex = (currentIndex + 1) % songs.length;
+  loadSong(currentIndex);
+  audioPlayer.play();
+  playPauseButton.textContent = 'Pause';
+}
+
+function playPrevSong() {
+  currentIndex = (currentIndex - 1 + songs.length) % songs.length;
+  loadSong(currentIndex);
+  audioPlayer.play();
+  playPauseButton.textContent = 'Pause';
+}
+
+document.getElementById('prev').addEventListener('click', playPrevSong);
+document.getElementById('play-pause').addEventListener('click', playPauseSong);
+document.getElementById('next').addEventListener('click', playNextSong);
+</script>
+
+</body>
+</html>
